@@ -28,7 +28,7 @@ def home():
 def district(name):
     return render_template(f"{name}.html")
 
-@app.route("/Contact", methods=["GET", "POST"])
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
         name = request.form.get("name")
@@ -42,7 +42,7 @@ def contact():
 
         return redirect(url_for("thank_you"))  # Redirect to thank-you page
 
-    return render_template("Contact.html")
+    return render_template("contact.html")
 
 @app.route("/thank-you")
 def thank_you():
